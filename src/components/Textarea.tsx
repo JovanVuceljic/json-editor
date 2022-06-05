@@ -7,7 +7,7 @@ interface TextareaProps {
 
 const Textarea: React.FC<TextareaProps> = (props) => {
   const handleChange = (e: any): void => {
-    setShownValue(e.currentTarget.value);
+    setShownValue(e?.currentTarget?.value);
   };
 
   const { jsonKey, value } = props;

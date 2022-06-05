@@ -8,7 +8,7 @@ interface InputProps {
 
 const Input: React.FC<InputProps> = (props) => {
   const handleChange = (e: any): void => {
-    setShownValue(e.currentTarget.value);
+    setShownValue(e?.currentTarget?.value);
   };
 
   const { type, jsonKey, value } = props;

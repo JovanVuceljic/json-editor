@@ -7,7 +7,7 @@ interface InputProps {
 
 const InputDate: React.FC<InputProps> = (props) => {
   const handleChange = (e: any): void => {
-    setShownValue(e.currentTarget.value);
+    setShownValue(e?.currentTarget?.value);
   };
 
   const formatedDate = (value: string): string => {
