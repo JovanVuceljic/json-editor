@@ -12,6 +12,7 @@ const InputDate: React.FC<InputProps> = (props) => {
 
   const formatedDate = (value: string): string => {
     return new Date(value).toISOString().split("T")[0].slice(0, 10);
+    // return new Date(value).toISOString();
   };
 
   const { jsonKey, value } = props;
@@ -28,4 +29,4 @@ const InputDate: React.FC<InputProps> = (props) => {
   );
 };
 
-export default InputDate;
+export default React.memo(InputDate);

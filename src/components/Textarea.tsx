@@ -20,4 +20,4 @@ const Textarea: React.FC<TextareaProps> = (props) => {
   );
 };
 
-export default Textarea;
+export default React.memo(Textarea);

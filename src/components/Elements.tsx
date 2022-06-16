@@ -11,11 +11,12 @@ const Elements: React.FC<ElementsProps> = ({ elements }) => {
   const shortTextMax = 55;
 
   const isIdField = (key: string): boolean =>
-    key === "id" || key === "_id" || key === "guid" || key === "userId";
+    ["id","_id","guid", "userId"].includes(key);
 
   const isDate = (value: string): boolean => {
     const d = new Date(value);
-    return d.getTime() === d.getTime();
+    // return d.getTime() === d.getTime();
+    return d instanceof Date && !isNaN(d.valueOf());
   };
 
   return (
